@@ -1,0 +1,129 @@
+.todo-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+}
+
+.todo-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #456ccf;
+  margin-bottom: 20px;
+}
+
+.todo-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .todo-filter {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .todo-search-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #456ccf;
+  }
+
+  .todo-search-wrapper {
+    display: flex;
+    align-items: center;
+
+    .todo-search {
+      flex: 1;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+  }
+}
+
+.todo-list {
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .todo-text {
+      flex: 1;
+      font-size: 16px;
+      color: #333;
+      word-wrap: break-word;
+    }
+
+    .edit-input {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    .todo-buttons {
+      margin-left: auto;
+
+      .todo-delete,
+      .todo-edit {
+        cursor: pointer;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .todo-delete {
+        background-color: #ff4d4f;
+        color: #fff;
+        margin-right: 5px;
+      }
+
+      .todo-edit {
+        background-color: #52c41a;
+        color: #fff;
+      }
+    }
+
+    &.checked {
+      .todo-text {
+        text-decoration: line-through;
+        color: #999;
+      }
+    }
+  }
+}
+
+.todo-add-form {
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #ff4d4f;
+  margin-top: 10px;
+}
